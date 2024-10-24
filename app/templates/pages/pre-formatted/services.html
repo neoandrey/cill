@@ -1,0 +1,24 @@
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>{{ options.servicesSection.header }}</h2>
+          <p>{{ options.servicesSection.text }}</p>
+        </div>
+
+        <div class="row">
+        
+            {% for service in options.services %}
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="{{ service.id }}00">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="{{ service.url }}">{{ service.name }}</a></h4>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->

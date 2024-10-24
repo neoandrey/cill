@@ -1,0 +1,4 @@
+When saving pages, if you intend to save html codes:
+1.  switch the editor to  code(click '</>' ) mode
+2.  Paste or Type in the HTML code
+3.  Switch back to normal editing mode

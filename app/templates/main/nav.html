@@ -1,0 +1,39 @@
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="{{ options.pages[0].href }}">{{ options.siteName }}</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="{{ url_for('static', filename='assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+		   {% for page in options.navPages  %}
+				 {% if page.is_parent %}
+					  <li class="dropdown"><a href="#"><span>{{ page.page_name }}</span> <i class="bi bi-chevron-down"></i></a>
+						<ul>
+						 {% for sub_page in options.sub_pages  %}
+							{% if sub_page.is_parent ==  True  and sub_page.parent_page.page_id == page.page_id %}
+							  <li class="dropdown"><a href="{{ sub_page.href }}"><span>{{ sub_page.page_name }}</span> <i class="bi bi-chevron-right"></i></a>
+								 <ul>
+								 {% for sub_page_2 in options.sub_pages %}
+									{% if  sub_page_2.parent_page.page_id ==sub_page.page_id %} 
+										<li><a href="{{ sub_page_2.href }}">{{ sub_page_2.page_name }} </a></li>
+									{% endif %}
+								{% endfor %}
+								 </ul>
+							{% elif  sub_page.parent_page.page_id == page.page_id %}
+									<li><a href="{{ sub_page.href }}">{{ sub_page.page_name }} </a></li>
+							{% endif %}
+						 {% endfor %}
+						 </ul>
+					  </li>
+				{% else  %}
+						 <li><a class="nav-link scrollto"      href="{{ page.href }}">{{ page.page_name }}</a></li>
+				{% endif %}
+		  {% endfor %}
+		   <li><a class="getstarted scrollto" href="/pages/register">Register</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->

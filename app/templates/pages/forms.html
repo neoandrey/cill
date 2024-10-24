@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{{ options.siteSettings.site_name }}</title>
+  <meta content="{{ options.siteSettings.site_description }}" name="description">
+  <meta content="{{ options.siteSettings.site_keywords }}" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/favicon.png')}}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+   <link href="{{ url_for('static', filename='assets/fonts/googlefonts.txt')}}" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha - v4.3.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+
+    {% include "../main/nav.html" %}
+
+    {% include "../main/header.html" %}
+  <main id="main">
+    <div>Forms</div>
+   {{options.current_page.contents|safe}}
+  </main><!-- End #main -->
+
+ {% include "pre-formatted/footer.html" %}
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+ {% include "main/modal.html" %}
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
+  <script src="{{ url_for('static', filename='cpanel/plugins/jquery/jquery.min.js')}}"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <!-- ChartJS -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/chart.js/Chart.min.js')}}"></script>
+  <!-- Sparkline -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/sparklines/sparkline.js')}}"></script>
+  <!-- JQVMap -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='cpanel/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+  <!-- daterangepicker -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/moment/moment.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='cpanel/plugins/daterangepicker/daterangepicker.js')}}"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+  <!-- Summernote -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/summernote/summernote-bs4.min.js')}}"></script>
+  <!-- overlayScrollbars -->
+  <script src="{{ url_for('static', filename='cpanel/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>

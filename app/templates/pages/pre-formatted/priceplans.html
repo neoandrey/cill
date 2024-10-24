@@ -1,0 +1,34 @@
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+		
+       {% for plan  in options.pricePlans   %}
+		  <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100"> <!--  <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200"> -->
+            <div class="box">
+              <h3>{{ plan.name }}</h3>
+              <h4><sup>{{ plan.currency }}</sup>{{ plan.price }}<span>{{ plan.period }}</span></h4>
+              <ul>
+			   {% for  avail_feature in  plan.available_feature %}
+					<li><i class="bx bx-check"></i> {{ avail_feature }} </li>
+			   {% endfor %}
+               {% for rstr_feature in plan.restricted_features %} 
+                <li class="na"><i class="bx bx-x"></i> <span>{{ rstr_feature }}</span></li>
+               {% endfor %}
+              </ul>
+              <a href="{{ plan.page.href }}" class="buy-btn">Get Started</a>
+            </div>
+          </div>
+		{% endfor  %}
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
