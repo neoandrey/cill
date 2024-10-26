@@ -1,0 +1,820 @@
+{
+"wrapper": {  "id":"wrapper"
+ ,"type": "div"
+ ,"className": "homepage-1"
+,"children":[
+  {"header": { "id": "header"
+  ,"type": "div",
+   "className":""
+   ,"children":[
+
+    { "top":{ "type":"HeaderTop"
+       ,"id": "top"
+      ,"className":"top"
+      ,"phoneNumber": "(123)456789"
+      ,"email":  "hello@notjustpulp.com"
+      ,"offerNotice": {"text": "Free Shipping <a href=\"#\">on All Orders Over</a> $75!", "action":"$.fn.loadOffers()"}
+      ,"topControlItems":[
+        {"id":0, "text": "Designs", "action":"$.fn.showDesigns()"}
+        ,{"id":1, "text": "Register", "action":"$.fn.LoadRegPage()"}
+        ,{"id":2, "text": "Login", "action":"$.fn.loadLoginForm()"}
+      ]
+
+
+    }
+
+    }, {"nav":{   "id":"believe-nav"
+                  ,"type": "Nav"
+                  ,"logo":{
+                    "image":"/static/images/logo.png"
+                  , "clickAction":"$.fn.loadIndexPage()"
+                 }
+                 ,"navBarItems":[
+                    {"id":0, "text":"Home <span class=\"sr-only\">(current)</span>", "clickAction":"$.fn.loadIndexPage()", "className":"active"}
+                  , {"id":1,"text":"Blog", "clickAction":"$.fn.loadBlogPage()", "className":""}
+                  , {"id":2,"text":"Blog Post", "clickAction":"$.fn.loadBlogPostPage()", "className":""}
+                  , {"id":3,"text":"Contact", "clickAction":"$.fn.loadContactPage()", "className":""}
+
+                 ]
+                 ,"navBarTopRightItems":[
+                          {"id":0, "text":"", "clickAction":"$.fn.loadIndexPage()", "image":"/static/images/pav.png", "count":2}
+                        ,{"id":1, "text":"", "clickAction":"$.fn.loadIndexPage()", "image":"/static/images/bag.png", "count":2}
+                 ]
+         
+
+          }
+  
+        }
+      ,{"NavHeader" :{ 
+        "type": "NavHeader"
+        ,"id": "cat-nav"
+      , "navHeaderItems":[ 
+        {"id":0, "text": "ELECTRONICS", "className":"active", "clickAction": "$.fn.showElectronics()", "children":null}
+       ,{"id":1, "text": "MEN","clickAction":null,  "children":[
+
+         {"id":0
+          ,"text":"All Clothing"
+         ,"outerClass":"mega-sub"
+         ,"innerClass":"mega-sub-title"
+         , "children" : [
+                  {"id":  0,  "text": "T-Shirts", "clickAction": null}
+                 ,{"id":  1,  "text": "Casual & Party Wear Shirts", "clickAction": null}
+                 ,{"id":  2,  "text": "Jeans", "clickAction": null}
+                 ,{"id":  3,  "text": "Formal Shirts", "clickAction": null}
+                 ,{"id":  4,  "text": "Cargos, Shorts & 3/4ths", "clickAction": null}
+                 ,{"id":  5,  "text": "Sports Wear", "clickAction": null}
+                 ,{"id":  6,  "text": "Trousers", "clickAction": null}
+                 ,{"id":  7,  "text": "Suits and Blazers", "clickAction": null}
+                 ,{"id":  8,  "text": "Ethnic Wear", "clickAction": null}
+                 ,{"id":  9,  "text": "Inner & Sleep Wear", "clickAction": null}
+                 ,{"id":  10, "text": "Accessories", "clickAction": null}
+               ]
+        }
+         , {"id":1
+           ,"text":"All Footwear"
+         ,"outerClass":"mega-sub"
+         ,"innerClass":"mega-sub-title"
+         , "children" : [
+                  {"id":  0,  "text": "Flats", "clickAction": null}
+                 ,{"id":  1,  "text": "Heels", "clickAction": null}
+                 ,{"id":  2,  "text": "Bellies", "clickAction": null}
+                 ,{"id":  3,  "text": "Wedges", "clickAction": null}
+                 ,{"id":  4,  "text": "Slippers & Flip- Flop's", "clickAction": null}
+                 ,{"id":  5,  "text": "Sports Shoes", "clickAction": null}
+                 ,{"id":  6,  "text": "Sports Sandals", "clickAction": null}
+                 ,{"id":  7,  "text": "Casual Shoes", "clickAction": null}
+                 ,{"id":  8,  "text": "Formal Shoes", "clickAction": null}
+                 ,{"id":  9,  "text": "Ethnic", "clickAction": null}
+                 ,{"id":  10, "text": "Boots", "clickAction": null}
+         ]
+       } , 
+        { "id":2
+        ,"text":"Featured products"
+         ,"outerClass":"mega-product"
+         ,"innerClass":"mega-sub-title"
+         , "children" : [
+              {   "children": [ 
+                  {"id":  0,  "image": "static/images/p-9.jpg", "clickAction": null}
+                 ,{"id":  1,  "image": "static/images/p-3.jpg", "clickAction": null}
+                 ,{"id":  2,  "image": "static/images/p-4.jpg", "clickAction": null}
+                 ,{"id":  3,  "image": "static/images/p-5.jpg", "clickAction": null}
+                 ,{"id":  4,  "image": "static/images/p-2.jpg", "clickAction": null}
+                  ]
+                ,"headerText":"Striped Men's Round Neck T-Shirt"
+                ,"oldPrice": "$19.00"
+                ,"newPrice":"$15.00"
+              }  ,{ 
+                 "children": [ 
+                  {"id":  0,  "image": "static/images/p-9.jpg", "clickAction": null}
+                 ,{"id":  1,  "image": "static/images/p-3.jpg", "clickAction": null}
+                 ,{"id":  2,  "image": "static/images/p-4.jpg", "clickAction": null}
+                 ,{"id":  3,  "image": "static/images/p-5.jpg", "clickAction": null}
+                 ,{"id":  4,  "image": "static/images/p-2.jpg", "clickAction": null}
+                  ]
+                ,"headerText":"Striped Men's Round Neck T-Shirt"
+                ,"oldPrice": "$19.00"
+                ,"newPrice":"$15.00"
+              }
+         ]
+       }
+       ,{ "id": "3"
+          , "className": "mega-offers"
+          ,"image":"static/images/mega-offers.jpg"
+          ,"clickAction": null
+
+
+       }
+
+
+
+       ] }
+
+    ,{"id":2, "text": "WOMEN","clickAction":null}
+    ,{"id":3, "text": "BABY & KIDS","clickAction":null}
+    ,{"id":4, "text": "BOOKS & MEDIA","clickAction":null}
+    ,{"id":5, "text": "HOME & KITCHEN","clickAction":null}
+    ,{"id":6, "text": "MORE STORES","clickAction":null}
+    ,{"id":7, "text": "OFFERS ZONE","clickAction":null}
+    ,{"id":8, "text": "", "clickAction":null, "image":"static/images/offers.png"}
+
+
+
+      ]}
+
+      }
+     
+
+
+
+
+  ]
+}
+  }
+,{"main-slider":{
+  "className": null
+  ,"type": "div"
+  , "children":[
+    { "home-slider":{
+      "className": "owl-carousel owl theme"
+      ,"type": "div"
+      , "children":[
+        { 
+          "id": 0
+          ,"className": "item"
+          ,"type": "SliderItem"
+          ,"image": "static/images/slider-1.jpg"
+          ,"leftText1":"Men\u0027s"
+          ,"leftText2":"FASHION"
+          ,"leftText3":"New & Fresh Collection"
+          ,"leftText4":"arrival in Believe store"
+          ,"leftText5":"Shop Now"
+        ,"rightText1":"Women\u0027s"
+        ,"rightText2":"FASHION"
+        ,"rightText3":"New & Fresh Collection"
+        ,"rightText4":"arrival in Believe store"
+        ,"rightText5":"Shop Now"
+        }
+        ,{
+          "id": 1
+          ,"className": "item"
+           ,"type": "SliderItem"
+          ,"image": "static/images/slider-2.jpg"
+          ,"leftText1":"50% Price cut"
+          ,"leftText2":"for online order"
+          ,"leftText3":"New & Fresh Collection"
+          ,"leftText4":"arrival in Believe store"
+          ,"leftText5":"Shop Now"
+
+        ,"rightText1": null
+        ,"rightText2": null
+        ,"rightText3": null
+        ,"rightText4": null
+        ,"rightText5":  null
+        }
+
+
+      ]
+
+     }
+
+    }
+  ]}
+},
+{"content":{
+  "className": null
+  ,"type": "div"
+  ,"children":[
+  {"container":{
+    "className": "container"
+    ,"type": "div"
+    ,"children":[
+      {"home-content":{
+      "className": "home-content"
+      ,"type": "div"
+      ,"children":[
+
+{"cat-offers":{
+      "className": "cat-offers"
+      ,"type": "div"
+      ,"children":[
+        {"row":{
+      "className": "row"
+      ,"type": "div"
+      ,"children":[
+        {
+          "id":1
+          ,"type":"Offer"
+          ,"image": "static/images/cat-1.jpg"
+          ,"text1":"man"
+          ,"text2":"Clothing"
+          , "button":"Buy Now"
+        }
+        ,{
+          "id":2
+          ,"type":"Offer"
+          ,"image": "static/images/cat-2.jpg"
+          ,"text1":"woman"
+          ,"text2":"Clothing"
+          , "button":"Buy Now"
+        }   ,     {
+          "id":3
+          ,"type":"Offer"
+          ,"image": "static/images/cat-3.jpg"
+          ,"text1":"accessories"
+          ,"text2":"collections  - 2014"
+          , "button":"Buy Now"
+        }
+      
+
+
+
+
+
+      
+        ]}}
+
+
+
+
+
+
+      ]}}
+  
+  
+
+
+           ]
+  
+  }
+}
+,
+{"newest":{ 
+  "type": "div"
+  , "className":"newest"
+  , "children":[
+
+    {"nw-container":{ 
+  "type": "div"
+  , "className":"container"
+  , "children":[
+
+    
+    {"newest-content":{ 
+    "className":"newest-content"
+   ,"type": "div"
+  , "children":[    
+    {"newest-tab":{ 
+   "type": "div"
+    , "className":"newest-tab"
+    , "children":[
+
+      { "id": "myTab"
+      , "type": "Tab"
+      , "tabList":[{
+    "id": 0
+    ,"className": "active"
+    ,"text": "Featured"
+    }
+    ,{
+    "id": 1
+    ,"text": "New Arrivals"
+    }
+    ,{
+    "id": 2
+    ,"text": "Best Sellers"
+    }]
+}
+,{"MyTabContent":{
+    "className":"tab-content"
+   ,"type":"div"
+   ,"children":[
+      {
+        "id": "1"
+        ,"type":"TabPanel"
+        ,"role":"tabpanel"
+        , "className": "tab-pane fade in active"
+        ,"subClass":"row clearfix"
+    ,"children":[
+    {"id": 0
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "Adidas Striped Men\u0027s Round Neck T-Shirt"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+      "static/images/p-1.jpg"
+      ,"static/images/p-2.jpg"
+      ,"static/images/p-3.jpg"
+      ,"static/images/p-4.jpg"
+      ,"static/images/p-5.jpg"
+     ]
+   },    {"id": 1
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "Women\u0027s Jeans"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+      "static/images/p-2.jpg"
+      ,"static/images/p-3.jpg"
+      ,"static/images/p-4.jpg"
+      ,"static/images/p-5.jpg"
+      ,"static/images/p-1.jpg"
+      ]
+   },    
+   {"id": 2
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "Running Shoes"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+        "static/images/p-3.jpg"
+        ,"static/images/p-4.jpg"
+        ,"static/images/p-5.jpg"
+        ,"static/images/p-1.jpg"
+        ,"static/images/p-2.jpg"
+      ]
+   },    
+   {"id": 3
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "men\u0027s Jeans"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+        "static/images/p-4.jpg"
+        ,"static/images/p-5.jpg"
+        ,"static/images/p-1.jpg"
+        ,"static/images/p-2.jpg"
+        ,"static/images/p-3.jpg"
+      ]
+   }
+   ,    
+   {"id": 4
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "Striped Men\u0027s Round Neck T-Shirt"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+     
+      
+      "static/images/p-5.jpg"
+      ,"static/images/p-1.jpg"
+      ,"static/images/p-2.jpg"
+      , "static/images/p-3.jpg"
+      ,"static/images/p-4.jpg"
+      ]
+   }
+      ,    
+   {"id": 5
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "Women\u0027s Round Neck T-Shirt"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+      "static/images/p-6.jpg"
+      ,"static/images/p-7.jpg"
+      ,"static/images/p-8.jpg"
+      , "static/images/p-5.jpg"
+      ]
+   }
+   ,    
+   {"id": 6
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "men\u0027s Jeans"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+  
+        "static/images/p-7.jpg"
+        ,"static/images/p-8.jpg"
+        ,"static/images/p-5.jpg"
+        ,"static/images/p-6.jpg"
+  
+      ]
+   }
+  ,    
+   {"id": 7
+     ,"type":"Product"
+     ,"btnText": "Add To Cart"
+     ,"productName": "Heels"
+     ,"oldPrice":"$19.00"
+     ,"newPrice": "$15.00"
+     ,"clickAction": null
+     ,"imageList":[
+  
+      
+        "static/images/p-8.jpg"
+        ,"static/images/p-5.jpg"
+        ,"static/images/p-6.jpg"
+        ,  "static/images/p-7.jpg"
+  
+      ]
+   }
+   
+   
+        ]
+
+      }
+    ,{
+        "id": "2"
+        ,"className":"tab-pane fade"
+        ,"subClass":"row"
+        ,"type":"TabPanel"
+        ,"role": "tabpanel"
+       
+    },{
+        "id": "3"
+        ,"className":"tab-pane fade"
+        ,"subClass":"row"
+        ,"type":"TabPanel"
+        ,"role": "tabpanel"
+       
+    }
+
+   ]
+}
+    }
+
+
+
+
+
+  ]
+  
+  }}
+
+
+  ]
+}
+}
+  
+
+  ]}}
+  
+  ]
+
+
+
+}
+},{
+  "content-offers":{  "className":"content-offers" , "type": "div"
+  , "children":[
+
+    {
+ "container":{"className":"container","type":"div",
+"children":[ {"id": "ct-offers","className":"ct-offers", "type":"ContentOffer", "title":"Tommy Hilfiger","text1":"Women\u0027s","text2":"The generated Lorem Ipsum is therefore always free from repetition, injected humour", "button":{"text":"Discover more Product", "clickAction":"$.fn.showContentOffers()"}
+
+
+}
+
+
+]}
+
+    }
+
+  ]
+  }
+  
+},{
+  "brands":{
+      "className":"brands"
+      ,"type": "div"
+  , "children":[{
+  "container":{  "className":"container" , "type": "div"
+  , "children":[ {
+      "brands-inner":{
+ "className":"brands-inner"
+ ,"type":"div"
+ ,"children":[{
+   "brand-title":{
+    "className":"brand-title"
+   , "type":"span"
+    ,"attribs":{"innerHTML": "BRAND"}
+    
+   }
+ } 
+ ,{"slider-home":{
+  "className": "slider-home"
+  ,"type":"div"
+  ,"children":[
+     {"brand-carousel":{
+       "className": "owl-carousel owl-theme"
+       ,"type":"div"
+       ,"children": [
+          {"id":"0"
+          ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-2.png"
+            ,"text":"slide-0"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+            
+            }
+          }
+          ,{"id":"1"
+            ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-3.png"
+            ,"text":"slide-1"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+          
+            }
+          }
+          ,{"id":"2"
+          ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-4.png"
+            ,"text":"slide-2"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+            
+            }
+
+          }
+            ,{"id":"3"
+             ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-1.png"
+            ,"text":"slide-3"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+           
+            }
+          }
+        ,{"id":"4"
+         ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-5.png"
+            ,"text":"slide-4"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+           
+            }
+          }
+          ,{"id":"5"
+          ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-2.png"
+            ,"text":"slide-5"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+            
+            }
+          }
+            ,{"id":"6"
+            ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-3.png"
+            ,"text":"slide-6"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+            
+            }
+          }
+          ,{"id":"7"
+           ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-4.png"
+            ,"text":"slide-7"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+           
+            }
+          }
+          ,{"id":"8"
+          ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-1.png"
+            ,"text":"slide-8"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+            
+            }
+          }
+          ,{"id":"9"
+           ,"type":"BrandCarouselItem"
+            , "image": {
+            "src": "static/images/brand-5.png"
+            ,"text":"slide-9"
+            ,"clickAction":"$.fn.loadBrandarouselInfo(0)"
+           
+            }
+          }
+
+       ]
+     }}
+  ]
+
+
+ }}
+]
+      }
+     
+  }
+    
+
+  ]}
+    
+  }]
+  
+  
+}
+}
+,{
+  "rec-blog":{ "className":"rec-blog", "type": "div"
+  , "children":[ 
+    {"container":{"className": "container","type": "div"
+          ,"children":[{
+
+          "rec-blog-inner":{"className":"rec-blog-inner", "type":"div"
+          ,"children":[
+          {"blog-title":{"type":"div"
+              ,"children":[{ 
+              "type":"span"
+              ,"innerHTML":"The Blog"
+              }
+              ]
+          }
+          }
+
+          ]}
+
+          },
+
+          {
+            "row":{"className":"row", "type":"div"
+            ,"children":[
+                {"id":0, "type":"BlogItem","text1":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque !", "text2":"May 11,2014", "image":{"src":"static/images/rec-1.jpg","clickAction":"$.fn.showBlogItem(0)"}}
+              , {"id":1,"type":"BlogItem", "text1":"Voluptatem accusantium doloremque", "text2":"May 11,2014", "image":{"src":"static/images/rec-2.jpg","clickAction":"$.fn.showBlogItem(1)"}}
+              , {"id":2,"type":"BlogItem", "text1":"Voluptatem accusantium doloremque", "text2":"May 11,2014", "image":{"src":"static/images/rec-3.jpg","clickAction":"$.fn.showBlogItem(2)"}}
+             ]
+
+            }
+
+
+          }
+        ]
+
+
+    }}
+    
+  ]
+  }
+  
+}
+ ]
+}
+
+}
+
+  ]
+
+
+
+
+}
+}
+
+,{
+  "footer":{
+      "className":"footer"
+      , "type":"div"
+      ,"children":[
+        {
+          "footer-widget":{
+             "className":"footer-widget"
+            ,"type":"div"
+            ,"children":[
+              {
+                "footer-row":{
+                  "className":"row"
+                  ,"type": "div"
+                  ,"children":[
+                    {
+                      "id":"0"
+                      ,"type":"FarLeftItem"
+                      ,"imagePath":"static/images/logo-white.png"
+                      ,"text1":"Welcome to"
+                      ,"text2":"Believe isCommerce WordPress theme. It has<br/>everything you need to start selling today!"
+                      ,"text3":"Get this theme on ThemeForest!"
+                    ,"linkClickAction": "$.fn.show('Link clicked')"
+                    ,"fbClickAction": "$.fn.show('I am Like loading Facebook right now')"
+                    ,"twitterClickAction": "$.fn.show('Twitter loading in a second')"
+                    ,"googleClickAction": "$.fn.show('Googling stuff right now')"
+                    ,"igClickAction": "$.fn.show('Connecting to Instagram')"
+                    ,"pinterestClickAction": "$.fn.show('Checking out images on Pinterest')"
+
+                    },{
+                      "id":"1"
+                      ,"type":"QuickLinks"
+                      ,"title":"Quick Links"
+                      ,"children":[
+                         {"text": "Home", "clickAction":"$.fn.show('Loading index page')"} 
+                       , {"text": "contact Us", "clickAction":"$.fn.show('Loading Contacts page')"} 
+                       , {"text": "Blog", "clickAction":"$.fn.show('Loading Blog page')"} 
+                       , {"text": "Help", "clickAction":"$.fn.show('Loading Help page')"} 
+                      ]
+                    },{
+                      "id":"2"
+                      ,"type":"Legal"
+                      ,"title":"&nbsp;"
+                      ,"children":[
+                         {"text": "Tearms & condition", "clickAction":"$.fn.show('Loading Tearms & condition page')"} 
+                       , {"text": "FAQs", "clickAction":"$.fn.show('Loading FAQs page')"} 
+                       , {"text": "Privacy Policy", "clickAction":"$.fn.show('Loading Privacy Policy page')"} 
+                       , {"text": "Legal Desclaimer", "clickAction":"$.fn.show('Loading Legal Desclaimer page')"} 
+                      ]
+                    }
+                    ,{
+                      "id":"3"
+                      ,"type":"AccountProfile"
+                      ,"title":"User Account"
+                      ,"children":[
+                         {"text": "My Account", "clickAction":"$.fn.show('Loading Account page')"} 
+                       , {"text": "Personal Information", "clickAction":"$.fn.show('Loading Personal Information page')"} 
+                       , {"text": "Addresses", "clickAction":"$.fn.show('Loading Addresses page')"} 
+                       , {"text": "Orders", "clickAction":"$.fn.show('Loading Orders page')"} 
+                        , {"text": "Wishlist", "clickAction":"$.fn.show('Loading Wishlist page')"} 
+                        , {"text": "Track Orders", "clickAction":"$.fn.show('Loading Track Orders page')"} 
+                      ]
+                    } ,{
+                      "id":"4"
+                      ,"type":"Subscribe"
+                      ,"text1":"Subscribe for OFFERS & UPDATES"
+                      ,"text2":" Enter your email and we'll send you a coupon with 10% off your next order. Add any text here"
+                      ,"fieldPlaceHolder":"Enter email"
+                      ,"btnText":"Subscribe Now"
+                      ,"clickAction":"$.fn.show('Loading subscriptib page')"
+
+                    }
+
+
+                  ]
+                }
+              }
+            ]
+
+          }
+        }
+        ,{ "footer-text":{
+            "className":"footer-text"
+            ,"type":"div"
+            ,"children":[
+             {
+               "container":{
+                "className":"container"
+                ,"type": "div"
+                ,"children":[
+                  {
+                    "id":"0"
+                    ,"type":"p"
+                    ,"attribs":{ 
+                    "innerHTML":"Copyright 2023 All Rights Reserved by Believe. Designed and Developed by <a href>BootstrapMart </a>"
+                  }
+                }
+                ]
+               }
+
+             }
+            ]
+          }
+        }
+
+      ]
+
+  }
+}
+
+
+
+
+
+
+]
+}
+
+}

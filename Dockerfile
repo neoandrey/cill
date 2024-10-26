@@ -1,8 +1,8 @@
 FROM python:3-alpine
 LABEL maintainer ="Bolaji Aina <neoandey@yahoo.com>"
 
-ARG FLASK_APP cill.py
-ARG FLASK_ENV production
+ARG FLASK_APP=cill.py
+ARG FLASK_ENV=production
 ARG MONGODB_URL
 ARG MONGODB_DB
 ARG MONGODB_HOST
@@ -35,18 +35,21 @@ ENV REDIS_URL=$REDIS_URL
 ENV REDIS_QUEUE_NAME=$REDIS_QUEUE_NAME
 ENV PORT=$PORT
 
-
-RUN  mkdir -p "/opt/cill/app"  &&  mkdir -p "opt/cill/settings" &&  apk update && apk upgrade && apk add --no-cache bash \
+RUN  mkdir -p "/opt/$FLASK_APP/app"  &&  mkdir -p "opt/$FLASK_APP/settings" &&  apk update && apk upgrade && apk add --no-cache --update bash \
    gcc \
    libcurl \
    python3-dev \
    gpgme-dev \
-   libc-dev 
+   libc-dev \
+   g++ \
+   libxslt-dev \
+   libxslt-dev \
+   libffi-dev
 
-COPY [".flaskenv","./config.py","./cill.py","./Procfile","./redis_worker.py","./requirements.txt", "/opt/cill/"]
-COPY ["./app",  "/opt/cill/app"]
-COPY ["./settings","/opt/cill/settings"]
-RUN  python -m pip install --upgrade pip &&  python -m pip install -r  /opt/cill/requirements.txt && apk add bash  &&  pyversion1=$(echo "$(python -V 2>&1)"| grep -Eo '[+-]?[0-9]+([.][0-9]+)*') &&  pyversion=3.12 && sed -i -e 's/flask.json/json/g' "/usr/local/lib/python$pyversion/site-packages/flask_mongoengine/json.py"
-WORKDIR /opt/cill
-EXPOSE $PORT 6379 443 80 9320
-CMD python redis_worker.py & gunicorn -w 2 -b 0.0.0.0:$PORT  'cill:app' 
+COPY [".flaskenv","./config.py","./$FLASK_APP.py","./$FLASK_APP.py","./Procfile","./redis_worker.py","./requirements.txt", "/opt/$FLASK_APP/"]
+COPY ["./settings","/opt/$FLASK_APP/settings"]
+COPY ["./app",  "/opt/$FLASK_APP/app"]
+RUN  python -m pip install --upgrade pip &&  python -m pip install -r  /opt/$FLASK_APP/requirements.txt && apk add bash #&&  pyversion1=$$(ls /usr/local/lib | grep python| tail -1)  && sed -i -e 's/flask.json/json/g' "/usr/local/lib/$$pyversion1/site-packages/flask_mongoengine/json.py"
+WORKDIR /opt/$FLASK_APP
+EXPOSE $PORT 6379 443 80
+CMD python redis_worker.py & gunicorn -w 2 -b 0.0.0.0:$PORT  '$FLASK_APP:app' 

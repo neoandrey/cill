@@ -1,0 +1,17 @@
+{ "MONGODB_URL":"mongodb://mongo:Cill123!@db:27017/cilldb?authSource=admin&connectTimeoutMS=10000&minPoolSize=4&serverSelectionTimeoutMS=300000&retryReads=true&retryWrites=true"
+,"MONGODB_DB":"cilldb"
+,"MONGODB_HOST":"db"
+,"MONGODB_PORT":"29019"
+,"MONGODB_USERNAME":"mongo"
+,"MONGODB_PASSWORD":"Cill123!"
+,"MONGODB_USE_SSL":false
+,"MONGODB_REPLICASET":""
+,"MONGODB_DIRECT_CONNECTION":"true"
+,"MONGODB_AUTH_MECHANISM":"DEFAULT"
+,"SESSION_TYPE":"redis"
+,"REDIS_URL":"redis://default:C1llRed1s123!@redis:6379"
+,"REDIS_QUEUE_NAME":"cill_QUEUE"
+,"PORT":5000
+,"FLASK_APP": "cill.py"
+  ,"FLASK_ENV": "dev"
+}

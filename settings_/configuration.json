@@ -1,0 +1,221 @@
+{
+"SITE_NAME": "Canada Immigration Life Link"
+,"STARTUP_MESSAGE":"Starting new instance of CILL application..."
+,"SITE_ID": "CILL"
+,"SITE_TITLE": "Canada Immigration Life Link"
+,"SITE_DESCRIPTION":"Breaking new grounds and moving families across borders"
+,"SITE_KEYWORDS":"Canada,Immigration, IRCC, Express-Entry, Federal Skilled Workers, Nigeria"
+,"SECRET_KEY":"abea9632-956b-4d73-b6bf-a5920fdb282b"
+,"SESSION_TYPE": "redis"
+,"REDIS_URL"  :  "redis://:C1llRed1s123!@queue:6379"
+,"REDIS_QUEUE_NAME": "CILL_QUEUE"
+,"SQLALCHEMY_DATABASE_URI":""
+,"SESSION_PERMANENT":true
+,"SESSION_DURATION_MINS":5
+,"SQLALCHEMY_TRACK_MODIFICATIONS" :false
+,"CIPHER_COUNT" :2
+,"MONGODB_URL" :"mongodb://mongo:Cill123!@db:29019/cilldb?authSource=admin&connectTimeoutMS=10000&minPoolSize=4&serverSelectionTimeoutMS=300000&retryReads=true&retryWrites=true"
+,"MONGODB_DB" :"cilldb"
+,"MONGODB_HOST" : "db"
+,"MONGODB_PORT": 29019
+,"MONGODB_USERNAME" : "mongo"
+,"MONGODB_PASSWORD"  : "Cill123!"
+,"MONGODB_USE_SSL"   : false
+,"MONGODB_REPLICASET"   : ""
+,"MONGODB_DIRECT_CONNECTION"   : "true"
+,"MONGODB_AUTH_MECHANISM"   : "DEFAULT"
+,"LOG_TO_STDOUT" : true
+,"LOG_TO_FILE": true
+,"MAIL_SERVER" : "smtp.gmail.com"
+,"PROFILE_IMAGE_DIMENSIONS":{"width":263, "height":263}
+,"MAIL_PORT" : 25
+,"MAIL_USE_TLS" : false
+,"MAIL_USERNAME" : ""
+,"MAIL_PASSWORD" : ""
+,"ADMINS" :["neo, admin"]
+,"LANGUAGES" :["en", "es"]
+,"MONGODB_CONNECT": true
+,"MS_TRANSLATOR_KEY" :""
+,"RECORDS_PER_PAGE" :500
+,"MAX_CONTENT_LENGTH" :  377487360
+,"MONGO_BRIDGE_URL"     : "/cpanel/sync/"     
+,"LOKIDB_PORT"         : 5984
+,"LOKIDB_USERNAME"     : ""
+,"LOKIDB_PASSWORD"    : ""
+,"LOKIDB_DATABASE"     : "cilldb"
+,"LOKIDB_SERVER"      : "127.0.0.1"
+,"SYNC_INTERVAL"       :  5000
+,"UPLOAD_EXTENSIONS"   : []
+,"GCP_REDIRECT_PORT"      : 9302
+,"GCP_REDIRECT_URL"      : "http://localhost:{port}/"
+,"IMAGE_TYPES": {"login":{"width":121,"height":121},"icons":{"width":64,"height":64},"mini_logo":{"width":65,"height":65},"logo":{"width":123,"height":123},"banner":{"width":780,"height":646},"profile":{"width":123,"height":123},"generic":{"width":0,"height":0}}
+,"FILE_FORMATS": ["pdf","text","txt", "xls", "csv"]
+,"IMAGE_FORMATS":["jpeg","jpg","png","gif","tiff","psd","pdf","eps","ai","indd","raw","ico"]
+,"EXCLUDED_FILE_FORMATS":["adp","app","asp","bas","bat","cer","chm","cmd","cnt","com","cpl","crt","csh","der","exe","fxp","gadget","hlp","hpj","hta","inf","ins","isp","its","js","jse","ksh","lnk","mad","maf","mag","mam","maq","mar","mas","mat","mau","mav","maw","mda","mdb","mde","mdt","mdw","mdz","msc","msh","msh1","msh2","mshxml","msh1xml","msh2xml","msi","msp","mst","ops","osd","pcd","pif","plg","prf","prg","pst","reg","scf","scr","sct","shb","shs","ps1","ps1xml","ps2","ps2xml","psc1","psc2","tmp","url","vb","vbe","vbp","vbs","vsmacros","vsw","ws","wsc","wsf","wsh","xnk","ade","cla   ","class","grp","jar","mcf","ocx","pl","xbap","hpi"]
+,"SYNC_INFO"           : { "cpanel": [{      
+                                  "collectionName": "AuditTrail"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"trail_id"
+                                }
+                                ,{      
+                                  "collectionName": "Users"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"user_id"
+                                },{      
+                                  "collectionName": "Roles"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"role_id"
+                                },{      
+                                  "collectionName": "Images"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"image_id"
+                                },{      
+                                  "collectionName": "Jobs"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"job_id"
+                                },{      
+                                  "collectionName": "Clients"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"client_id"
+                                },{      
+                                  "collectionName": "Files"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"file_id"
+                                },{      
+                                  "collectionName": "Images"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"image_id"
+                                }
+                                ,{      
+                                  "collectionName": "Pages"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"page_id"
+                                }
+                                ,{      
+                                  "collectionName": "Banners"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"banner_id"
+                                }
+                                ,{      
+                                  "collectionName": "Partners"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"partner_id"
+                                }
+                                ,{      
+                                  "collectionName": "Ratings"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"rating_id"
+                                }
+                                ,{      
+                                  "collectionName": "ServiceTypes"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"type_id"
+                                }
+
+                                 ,{      
+                                  "collectionName": "Sections"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"section_id"
+                                } ,{      
+                                  "collectionName": "TeamMembers"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"member_id"
+                                }
+                                 ,{      
+                                  "collectionName": "Services"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"service_id"
+                                }
+                                 ,{      
+                                  "collectionName": "Faqs"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"faq_id"
+                                }
+                                 ,{      
+                                  "collectionName": "Messages"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"message_id"
+                                }
+                                 ,{      
+                                  "collectionName": "Clients"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"client_id"
+                                } ,{      
+                                  "collectionName": "MailTemplates"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"template_id"
+                                },{      
+                                  "collectionName": "GMailAccounts"
+                                , "matchingFields":["table_name","table_name"]
+                                , "watchedFields": ["current_version", "last_modified_date"]
+                                , "selector":{}
+                                , "mode":"update"
+                                , "idField":"account_id"
+                                }
+            
+                                ]
+                               ,"public":[]
+                            }
+ ,"SYNC_MODE": "LOCAL"
+ ,"TIME_OUT_MINUTES" : 5                            
+}

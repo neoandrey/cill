@@ -61,7 +61,6 @@ $billingAccountID = Get-ParameterValue  "Billing Account ID"
 .\gcp_deploy.ps1 -projectName $projectName -projectID $projectID -linkBillingAc $True -billingAccount $billingAccountID
 
 .\gcp_deploy.ps1 -listServiceAccounts $True
-
  
 $serviceAccount = Get-ParameterValue  "Service Account Email Address or Type 'NEW' to create a new service account"
 $serviceAccountName = $null
