@@ -34,14 +34,7 @@ jobs:
     - name: Get the release version
       id: strip-branch-name
       run: |
-        release_version=${{ github.ref }}
-        release_version=${release_version#refs/*/}
-        if [ -z "$release_version" ]
-        then
-              release_version=1.0.0
-        else
-              echo "release_version: \$release_version"
-        fi
+        release_version=$(echo "${{ github.ref }}" | sed 's/refs\/heads\/.*\///')
         echo "Building release version $release_version"
         echo "RELEASE_VERSION=$release_version" >> $GITHUB_ENV
       shell: bash
