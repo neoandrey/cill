@@ -77,4 +77,4 @@ jobs:
         APP_NAME: ${{ vars.APP_NAME }}
         REGISTRY: ${{ vars.REGISTRY }}
         RELEASE_VERSION: ${{ vars.RELEASE_VERSION }}
-     run: docker push $REGISTRY/$APP_NAME:$RELEASE_VERSION
+      run: docker push $REGISTRY/$APP_NAME:$RELEASE_VERSION
