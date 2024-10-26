@@ -34,9 +34,7 @@ jobs:
     - name: Get the release version
       id: strip-branch-name
       run: |
-        release_version=$(echo "${{ github.ref }}" | sed 's/refs\/heads\/.*\///')
-        echo "Building release version $release_version"
-        echo "RELEASE_VERSION=$release_version" >> $GITHUB_ENV
+             echo "RELEASE_VERSION=1.0.0" >> $GITHUB_ENV
       shell: bash
 
     - name: containerize
