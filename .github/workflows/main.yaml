@@ -72,4 +72,6 @@ jobs:
       env:
         APP_NAME: ${{ vars.APP_NAME }}
         REPOSITORY: ${{ vars.REPOSITORY }}
-      run: docker push $REPOSITORY/$APP_NAME:$RELEASE_VERSION
+      run: 
+        gcloud auth configure-docker --quiet
+        docker push $REPOSITORY/$APP_NAME:$RELEASE_VERSION
