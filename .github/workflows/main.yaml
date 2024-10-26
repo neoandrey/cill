@@ -52,9 +52,12 @@ jobs:
         REGISTRY: ${{ vars.REGISTRY }}
 
       run: |
-        docker build --build-arg PORT="$PORT"  --build-arg  FLASK_APP="${APP_NAME}" --build-arg  FLASK_ENV="$FLASK_ENV" --build-arg  MONGODB_URL="$MONGODB_URL" --build-arg MONGODB_DB="$MONGODB_DB" --build-arg MONGODB_AUTH_MECHANISM=DEFAULT --build-arg SESSION_TYPE="$SESSION_TYPE"  --build-arg REDIS_URL="$REDIS_URL" --build-arg  REDIS_QUEUE_NAME="$REDIS_QUEUE_NAME"  -t  "$APP_NAME:$RELEASE_VERSION" .
+        docker build --build-arg PORT="$PORT"  --build-arg  FLASK_APP="${APP_NAME}" --build-arg  FLASK_ENV="$FLASK_ENV" --build-arg  MONGODB_URL="$MONGODB_URL" --build-arg MONGODB_DB="$MONGODB_DB" --build-arg MONGODB_AUTH_MECHANISM=DEFAULT --build-arg SESSION_TYPE="$SESSION_TYPE"  --build-arg REDIS_URL="$REDIS_URL" --build-arg  REDIS_QUEUE_NAME="$REDIS_QUEUE_NAME"  -t  "$APP_NAME" .
+   
+    - name: Tag the image with release version
+      run: docker tag $APP_NAME $APP_NAME:$RELEASE_VERSION 
 
-    - name: Tag the image
+    - name: Tag the image with registry
       run: docker tag $APP_NAME:$RELEASE_VERSION $REGISTRY/$APP_NAME:$RELEASE_VERSION
 
     - name: Create a latest image
