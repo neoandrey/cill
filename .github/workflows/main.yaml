@@ -34,7 +34,14 @@ jobs:
     - name: Get the release version
       id: strip-branch-name
       run: |
-        release_version=$(echo "${{ github.ref }}" | sed 's/refs\/heads\/.*\///')
+        #release_version=$(echo "${{ github.ref }}" | sed 's/refs\/heads\/.*\///')
+        release_version=${github.ref#refs/*/}
+        if [ -z "$release_version" ]
+        then
+              release_version=1.0.0
+        else
+              echo "release_version: \$release_version"
+        fi
         echo "Building release version $release_version"
         echo "RELEASE_VERSION=$release_version" >> $GITHUB_ENV
       shell: bash
@@ -55,7 +62,7 @@ jobs:
         docker build --build-arg PORT="$PORT"  --build-arg  FLASK_APP="${APP_NAME}" --build-arg  FLASK_ENV="$FLASK_ENV" --build-arg  MONGODB_URL="$MONGODB_URL" --build-arg MONGODB_DB="$MONGODB_DB" --build-arg MONGODB_AUTH_MECHANISM=DEFAULT --build-arg SESSION_TYPE="$SESSION_TYPE"  --build-arg REDIS_URL="$REDIS_URL" --build-arg  REDIS_QUEUE_NAME="$REDIS_QUEUE_NAME"  -t  "$APP_NAME" .
    
     - name: Tag the image with release version
-      run: docker tag $APP_NAME $APP_NAME:$RELEASE_VERSION 
+      run: docker tag $APP_NAME "$APP_NAME:$RELEASE_VERSION" 
 
     - name: Tag the image with registry
       run: docker tag $APP_NAME:$RELEASE_VERSION $REGISTRY/$APP_NAME:$RELEASE_VERSION
