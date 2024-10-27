@@ -96,6 +96,6 @@ jobs:
         REGION: ${{ vars.REGION }}
         REPOSITORY: ${{ vars.REPOSITORY }}
         SESSION_TYPE: ${{ vars.SESSION_TYPE }}
-     run: 
-      gcloud run deploy "$APP_NAME"  --image "$REPOSITORY/$APP_NAME:latest"  --max-instances=$INSTANCES --port $PORT --set-env-vars="FLASK_APP=$FLASK_APP,FLASK_ENV=$FLASK_ENV,MONGO_URL=$MONGO_URL,MONGODB_DB=$MONGODB_DB,REDIS_QUEUE_NAME=$REDIS_QUEUE_NAME,REDIS_URL=$REDIS_URL,SESSION_TYPE=$SESSION_TYPE"
-      --region=$REGION --allow-unauthenticated   --service-account $SERVICE_ACCOUNT --add-volume=name=cill-uploads,type=cloud-storage,bucket=$BUCKET_NAME --add-volume-mount=volume=html-volume,mount-path=$BUCKET_MOUNT_PATH
+      run: 
+        gcloud run deploy "$APP_NAME"  --image "$REPOSITORY/$APP_NAME:latest"  --max-instances=$INSTANCES --port $PORT --set-env-vars="FLASK_APP=$FLASK_APP,FLASK_ENV=$FLASK_ENV,MONGO_URL=$MONGO_URL,MONGODB_DB=$MONGODB_DB,REDIS_QUEUE_NAME=$REDIS_QUEUE_NAME,REDIS_URL=$REDIS_URL,SESSION_TYPE=$SESSION_TYPE"
+        --region=$REGION --allow-unauthenticated   --service-account $SERVICE_ACCOUNT --add-volume=name=cill-uploads,type=cloud-storage,bucket=$BUCKET_NAME --add-volume-mount=volume=html-volume,mount-path=$BUCKET_MOUNT_PATH
