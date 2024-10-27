@@ -74,7 +74,6 @@ jobs:
         REPOSITORY: ${{ vars.REPOSITORY }}
         REGION: ${{ vars.REGION}}
       run: 
-        gcloud auth configure-docker $REGION-docker.pkg.dev --quiet &&
         docker push $REPOSITORY/$APP_NAME:$RELEASE_VERSION
     
     - name: Deploy to Cloud Run
