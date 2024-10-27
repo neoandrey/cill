@@ -72,6 +72,30 @@ jobs:
       env:
         APP_NAME: ${{ vars.APP_NAME }}
         REPOSITORY: ${{ vars.REPOSITORY }}
+        REGION: ${{ vars.REGION}}
       run: 
-        gcloud auth configure-docker
+        gcloud auth configure-docker $REGION-docker.pkg.dev --quiet
         docker push $REPOSITORY/$APP_NAME:$RELEASE_VERSION
+    
+    - name: Deploy to Cloud Run
+      env:
+        GCP_WIP: ${{ secrets.GCP_WIP }}
+        MONGODB_DB: ${{ secrets.MONGODB_DB }}
+        MONGODB_URL: ${{ secrets.MONGODB_URL }}
+        REDIS_QUEUE_NAME: ${{ secrets.REDIS_QUEUE_NAME }}
+        REDIS_URL: ${{ secrets.REDIS_URL }}
+        SERVICE_ACCOUNT: ${{ secrets.SERVICE_ACCOUNT }}
+        SETTINGS_DECRYPT_KEY: ${{ secrets.SETTINGS_DECRYPT_KEY }}
+        APP_NAME: ${{ vars.APP_NAME }}
+        BUCKET_MOUNT_PATH: ${{ vars.BUCKET_MOUNT_PATH }}
+        BUCKET_NAME: ${{ vars.BUCKET_NAME }}
+        FLASK_APP: ${{ vars.FLASK_APP }}
+        FLASK_ENV: ${{ vars.FLASK_ENV }}
+        INSTANCES: ${{ vars.INSTANCES }}
+        PORT: ${{ vars.PORT }}
+        REGION: ${{ vars.REGION }}
+        REPOSITORY: ${{ vars.REPOSITORY }}
+        SESSION_TYPE: ${{ vars.SESSION_TYPE }}
+     run: 
+      gcloud run deploy "$APP_NAME"  --image "$REPOSITORY/$APP_NAME:latest"  --max-instances=$INSTANCES --port $PORT --set-env-vars="FLASK_APP=$FLASK_APP,FLASK_ENV=$FLASK_ENV,MONGO_URL=$MONGO_URL,MONGODB_DB=$MONGODB_DB,REDIS_QUEUE_NAME=$REDIS_QUEUE_NAME,REDIS_URL=$REDIS_URL,SESSION_TYPE=$SESSION_TYPE"
+      --region=$REGION --allow-unauthenticated   --service-account $SERVICE_ACCOUNT --add-volume=name=cill-uploads,type=cloud-storage,bucket=$BUCKET_NAME --add-volume-mount=volume=html-volume,mount-path=$BUCKET_MOUNT_PATH
